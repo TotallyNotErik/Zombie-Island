@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviourPun
       
             float dist = Vector2.Distance(transform.position, targetPlayer.transform.position);
 
-            if (dist < attackRange && Time.time - lastAttackTime >= attackRange)
+            if (dist < attackRange && Time.time - lastAttackTime >= attackRate)
                 Attack();
  
             else if (dist > attackRange)
@@ -56,12 +56,11 @@ public class Enemy : MonoBehaviourPun
                 Vector3 dir = targetPlayer.transform.position - transform.position;
                 rig.velocity = dir.normalized * movespeed;
             }
-            else 
-            {
-                rig.velocity = Vector2.zero;
-            }
         }
-
+        else
+        {
+            rig.velocity = Vector2.zero;
+        }
         DetectPlayer();
     }
 

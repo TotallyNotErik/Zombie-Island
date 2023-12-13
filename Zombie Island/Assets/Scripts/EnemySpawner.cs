@@ -12,7 +12,10 @@ public class EnemySpawner : MonoBehaviourPun
 
     private float lastSpawnCheckTime;
     private List<GameObject> curEnemies = new List<GameObject>();
-
+    void Start()
+    {
+        lastSpawnCheckTime = Time.time + 20f;
+    }
     void Update()
     {
         if (!PhotonNetwork.IsMasterClient)

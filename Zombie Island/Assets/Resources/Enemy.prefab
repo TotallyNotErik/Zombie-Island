@@ -31,9 +31,10 @@ Transform:
   m_GameObject: {fileID: 8563931710139392779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.35137036, y: 0.5282991, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.5986, y: 3.5986, z: 3.5986}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1971658610051604615}
   - {fileID: 2954103512135164480}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -140,14 +141,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Enemy
-  movespeed: 3
-  curHp: 100
-  maxHp: 100
-  chaseRange: 5
-  attackRange: 1
+  movespeed: 6
+  curHp: 1000
+  maxHp: 1000
+  chaseRange: 10
+  attackRange: 5
   playerDetectRate: 0.2
-  objectToSpawnOnDeath: GoldPickup
-  damage: 5
+  objectToSpawnOnDeath: TreasurePickup
+  damage: 17
   attackRate: 0.5
   healthBar: {fileID: 5294308200079122679}
   sr: {fileID: 2059729061499539337}
@@ -211,7 +212,7 @@ PrefabInstance:
     - target: {fileID: 3672466369275502745, guid: d2c4b38f1bf59394a9f478a49be6df1b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3672466369275502745, guid: d2c4b38f1bf59394a9f478a49be6df1b,
         type: 3}
@@ -333,3 +334,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b536d5dca15d0fa44b33c902c082b1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &3010266338337217183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6772719573728226129}
+    m_Modifications:
+    - target: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.16040465
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646262333892770334, guid: f046a28ee4149aa45861059a0f5c4b3c,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemySpawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f046a28ee4149aa45861059a0f5c4b3c, type: 3}
+--- !u!4 &1971658610051604615 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3646262333892770328, guid: f046a28ee4149aa45861059a0f5c4b3c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3010266338337217183}
+  m_PrefabAsset: {fileID: 0}

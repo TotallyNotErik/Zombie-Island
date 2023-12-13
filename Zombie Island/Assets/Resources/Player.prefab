@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1045662813, guid: 8da61f2df908b5e46a61033f0d18e8c6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.42247573, g: 0.6320754, b: 0.38560572, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -185,9 +185,10 @@ MonoBehaviour:
   curHP: 100
   maxHP: 100
   dead: 0
+  ZombiesKilled: 0
   damage: 25
   attackRange: 1
-  attackRate: 0.2
+  attackRate: 0.3
   lastAttackTime: 0
   rig: {fileID: 7712825312081907268}
   sr: {fileID: 6908783369120383454}
@@ -320,7 +321,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: -58540849, guid: 8da61f2df908b5e46a61033f0d18e8c6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.572327, b: 0.572327, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

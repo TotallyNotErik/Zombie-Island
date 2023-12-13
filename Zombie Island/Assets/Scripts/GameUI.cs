@@ -7,7 +7,7 @@ using TMPro;
 public class GameUI : MonoBehaviour
 {
     public TextMeshProUGUI goldText;
-
+    public TextMeshProUGUI humansKilled;
     // instance
     public static GameUI instance;
 
@@ -18,6 +18,10 @@ public class GameUI : MonoBehaviour
 
     public void UpdateGoldText(int gold)
     {
-        goldText.text = "<b>Gold:<b> " + gold;
+        goldText.text = "<b>Current Damage:</b> " + gold;
+    }
+    public void UpdateKillCount(int killed)
+    {
+        humansKilled.text = "<b>Humans Killed:</b> " + killed;
     }
 }

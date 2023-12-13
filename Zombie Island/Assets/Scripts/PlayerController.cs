@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviourPun
     public int curHP;
     public int maxHP;
     public bool dead;
+    public int ZombiesKilled;
     
 
     [Header("Attack")]
@@ -96,6 +97,7 @@ public class PlayerController : MonoBehaviourPun
 
             Enemy enemy = hit.collider.GetComponent<Enemy>();
             enemy.photonView.RPC("TakeDamage", RpcTarget.MasterClient, damage);
+            this.photonView.RPC("Heal", RpcTarget.MasterClient, damage / 2);
         }
 
         weaponAnim.SetTrigger("Attack");
@@ -111,17 +113,17 @@ public class PlayerController : MonoBehaviourPun
 
         if (curHP <= 0)
             Die();
-        else
-        {
-            StartCoroutine(DamageFlash());
+        //else
+        //{
+        //    StartCoroutine(DamageFlash());
 
-            IEnumerator DamageFlash()
-            {
-                sr.color = Color.red;
-                yield return new WaitForSeconds(0.05f);
-                sr.color = Color.white;
-            }
-        }
+        //    IEnumerator DamageFlash()
+        //    {
+        //        sr.color = Color.red;
+        //        yield return new WaitForSeconds(0.05f);
+        //        sr.color = new Color(108, 161, 98, 255); ;
+        //    }
+        //}
     }
 
     void Die()
@@ -162,5 +164,14 @@ public class PlayerController : MonoBehaviourPun
         gold += goldToGive;
 
         GameUI.instance.UpdateGoldText(gold);
+    }
+
+    [PunRPC]
+    void Powerup(int increase)
+    {
+        ZombiesKilled += increase;
+        damage += increase;
+        GameUI.instance.UpdateKillCount(ZombiesKilled);
+        GameUI.instance.UpdateGoldText(damage);
     }
 }
